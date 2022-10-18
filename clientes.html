@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        fontSize: {
+          'header': '.75rem'
+        },
+        extend: {
+          spacing: {
+            '23.25': '6rem',
+            '39': '9.75rem',
+            '96': '24rem',
+            '112': '28rem',
+            '128': '32rem',
+            '152': '38rem',
+            '160': '40rem',
+            '286': '71.5rem',
+            'custom': '30rem',
+            '312': '78rem'
+
+          },
+          colors: {
+            redlight: '#e50914',
+            reddark: '#b81d28',
+            gray: '#443939',
+            graydark: '#221e1e',
+          },
+          borderWidth: {
+            DEFAULT: '1px',
+            '1': '1px'
+          },
+          inset: {
+            '1111': '50px'
+
+          },
+          boxShadow: {
+            'list': '0 3px 10px rgba(0, 0, 0, 0.6);',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+        .ion-title{
+            color:black;
+            font-size:65px;
+        }
+        .ion-submenu{
+            font-size:40px;
+        }
+        .text-title{
+            font-size:60px;
+        }
+        .list-submenu{
+            font-size:24px;
+        }
+    }
+</style>
+  <style>
+  </style>
+</head>
+
+<body class="mt-16 mx-16">
+  <div class="text-7xl flex">
+    <ion-icon name="person-add" class="ion-title text-black-100 mr-6"></ion-icon>
+    <p class="text-title">Registro de Clientes</p>
+  </div>
+  <div class="mt-14 flex justify-center">
+    <div class="mb-12 mx-8">
+      <form>
+        <label for="document">Tipo de Documento</label><br>
+        <select name="document" id="document" class="mb-8">
+          <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+          <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+          <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+          <option value="Pasaporte">Pasaporte</option>
+        </select>
+        <br>
+        <label for="n-document">Número de documento</label><br>
+        <input type="text" id="n-document" pattern=".{8,}" maxlength="10" placeholder="xxxxxxxxxx" required
+          class="mb-8 outline-0 border-black border-b">
+        <br>
+        <label for="name">Nombres y Apellidos</label><br>
+        <input type="text" id="name" placeholder="Pepito Perez" class="mb-8 outline-0 border-black border-b">
+        <br>
+        <label for="name and last">Placas del vehículo</label><br>
+        <input type="text" id="name and last" placeholder="MDB-984" pattern=".{8,}" maxlength="7" class="mb-8 outline-0 border-black border-b">
+    </div>
+    <div class="mx-12">
+      <label for="city">Ciudad de procedencia</label><br>
+      <input type="city" id="city" required class="mb-8 outline-0 border-black border-b"><br>
+      <label for="cell-phone"> Número de celular</label><br>
+      <input type="text" id="cell-phone" pattern=".{8,}" maxlength="13" required
+        class="mb-8 outline-0 border-black border-b"><br>
+      <label for="correo">Correo electronico</label><br>
+      <input type="email" id="correo" placeholder="ejemplo@gmail.com" class="mb-8 outline-0 border-black border-b"><br>
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <div class="flex justify-center gap-6 ml-96">
+    <button class="bg-red-800 text-white w-20 h-10 rounded">Cancelar</button>
+    <button class="bg-black text-white w-20 h-10 rounded">Continuar</button>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

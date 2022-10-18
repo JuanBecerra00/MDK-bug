@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontSize: {
+                    'header': '.75rem'
+                },
+                extend: {
+                    spacing: {
+                        '23.25': '6rem',
+                        '39': '9.75rem',
+                        '96': '24rem',
+                        '112': '28rem',
+                        '128': '32rem',
+                        '152': '38rem',
+                        '160': '40rem',
+                        '286': '71.5rem',
+                        'custom': '30rem',
+                        '312': '78rem'
+
+                    },
+                    colors: {
+                        redl: '#e50914',
+                        redd: '#b81d28',
+                        gray: '#443939',
+                        grayd: '#221e1e',
+                    },
+                    borderWidth: {
+                        DEFAULT: '1px',
+                        '1': '1px'
+                    },
+                    inset: {
+                        '1111': '50px'
+
+                    },
+                    boxShadow: {
+                        'list': '0 3px 10px rgba(0, 0, 0, 0.6);',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+        .ion-title{
+            color:black;
+            font-size:65px;
+        }
+        .ion-submenu{
+            font-size:40px;
+        }
+        .text-title{
+            font-size:60px;
+        }
+        .list-submenu{
+            font-size:24px;
+        }
+    }
+</style>
+    <style>
+    </style>
+</head>
+
+<body class="mt-16 mx-16 bg-transparent">
+
+    <div class="text-7xl flex">
+        <ion-icon name="cash" class="ion-title text-black-100 mr-10 "></ion-icon>
+        <p class="text-title">Impresion de la factura</p>
+    </div>
+    <section class="flex justify-center my-10">
+        <button
+            class="bg-blue-900 text-white w-12 h-12 mr-5 hover:shadow-list focus:bg-l rounded flex justify-center items-center col-end-8 col-span-2 duration-500">
+            <ion-icon name="document-text"></ion-icon>
+        </button>
+        <button
+            class="bg-red-800 text-white w-12 h-12 mr-5 hover:shadow-list focus:bg-l rounded flex justify-center items-center col-end-8 col-span-2 duration-500">
+            <ion-icon name="print"></ion-icon>
+        </button>
+        <button
+            class="bg-green-900 text-white w-12 h-12 hover:shadow-list focus:bg-l rounded flex justify-center items-center col-end-8 col-span-2 duration-500">
+            <ion-icon name="stats-chart"></ion-icon>
+        </button>
+    </section>
+    <article class="border p-8 mx-60 mt-0 mb-32">
+        <section class="flex bg-stone-400 p-8">
+            <img src="./assets/img/logomc.png" alt="logomega-chevrolet" class="h-28">
+            <p class="flex items-center ion-submenu">MEGA-CHEVROLET EDWIN RUBIO</p>
+        </section>
+        <section class="flex justify-around p-4 rounded border rounded-3xl my-4">
+            <div>
+                <label for="factura">Factura N°</label><br>
+                <input type="text" id="factura" placeholder="XXXX" disabled>
+            </div>
+            <div>
+                <label for="nombre-adm">Nombre del Administrador</label><br>
+                <input type="text" id="nombre-adm" class="outline-0 border-black border-b">
+            </div>
+            <div>
+                <label for="fecha">Fecha</label><br>
+                <input type="date" id="fecha">
+            </div>
+        </section>
+        <section class="flex justify-around">
+            <article class="border p-4 rounded-3xl w-full mr-4 ">
+                <article class="w-64 h-10 mb-4  border-redd border-b flex justify-center items-center text-redd-500">
+                    <p>Cliente</p>
+                </article>
+                <label for="documento">Numero de Documento</label><br>
+                <input type="text" id="documento" placeholder="xxxxxxxxxx" class="mb-4 outline-0 border-black border-b">
+                <br>
+                <label for="nombre-cli">Nombre y Apellidos</label><br>
+                <input type="text" id="nombre-cli" class="mb-4 outline-0 border-black border-b"><br>
+                <label for="telefono">Numero de telefono</label><br>
+                <input type="text" id="telefono" class="mb-4 outline-0 border-black border-b">
+            </article>
+            <article class="border p-4 rounded-3xl w-full ml-4">
+                <article class="w-64 h-10 mb-4 border-redd border-b flex justify-center items-center text-redd-500">
+                    <p>Vehiculo</p>
+                </article>
+                <label for="nombre-cli">Nombre y Apellidos</label><br>
+                <input type="text" id="nombre-cli" class="mb-4 outline-0 border-black border-b"><br>
+                <label for="telefono">Numero de telefono</label><br>
+                <input type="text" id="telefono" class="mb-4 outline-0 border-black border-b">
+            </article>
+        </section>
+        <section>
+            <section class="col-span-3 border p-4 rounded-3xl my-4">
+                <table class="overflow-y-scroll">
+                    <thead>
+                        <tr class="flex">
+                            <article
+                                class="w-40 h-10 mb-4 border-redd border-b flex justify-center items-center text-redd-500">
+                                <p>Insumos gastados</p>
+                            </article>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="flex">
+                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">Cambio de
+                                aceite
+                            </td>
+                            <td class="w-96 h-12 flex justify-center items-center text-xl border-b">
+                            </td>
+                        </tr>
+                        <tr class="flex">
+                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">
+                            </td>
+                            <td class="w-96 h-12 flex justify-center items-center text-xl border-b"></td>
+                        </tr>
+                        <tr class="flex ">
+                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">
+                            </td>
+                            <td class="w-96 h-12 flex justify-center items-center text-xl border-b"></td>
+                        </tr>
+                </table>
+            </section>
+            <div>
+                <section class="border-black border p-8 mb-8 bg-white rounded-3xl">
+                    <table class="overflow-y-scroll ">
+                        <thead>
+                            <article
+                                class="w-40 h-10 mb-4 border-redd border-b flex justify-center items-center text-redd-500">
+                                <p>Insumos gastados</p>
+                            </article>
+                            <tr class="flex">
+
+                                <th
+                                    class="w-40 h-10 mr-5 border-redd border-b flex justify-center items-center text-redd-500">
+                                    Nombre</th>
+                                <th
+                                    class="w-40 h-10 mr-5 border-redd border-b flex justify-center items-center text-redd-500">
+                                    Cantidad</th>
+                                <th
+                                    class="w-40 h-10 mr-5 border-redd border-b flex justify-center items-center text-redd-500">
+                                    Valor Unitario</th>
+                                <th
+                                    class="w-40 h-10 mr-5 border-redd border-b flex justify-center items-center text-redd-500">
+                                    Total</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="flex border-b">
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                                </td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">250000</td>
+                            </tr>
+                            <tr class="flex border-b">
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                                </td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">250000</td>
+                            </tr>
+                            <tr class="flex border-b">
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                                </td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">250000</td>
+                            </tr>
+                    </table>
+                </section>
+        </section>
+        <section>
+            <div>
+                <article class="w-40 h-10 border-redd border-b flex justify-center items-center text-redd-500">
+                    <p>Observaciones</p>
+                </article>
+                <label for="comentarios"></label><br>
+                <textarea name="comentarios" id="comentarios" cols="100" rows="6"
+                    placeholder="________________________________________________________________________________________________________________________________________________________________________________________________"
+                    class="bg-slate-200"></textarea>
+            </div>
+        </section>
+        <section class="flex bg-stone-400 p-8 justify-around">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <article>
+                <blockquote>correo:megachevroletduitama@gmail.com</blockquote>
+                <blockquote>cel:3123428041-3178321418</blockquote>
+                <blockquote>Direccion:Cra 42 N° 8-64</blockquote>
+            </article>
+            <ion-icon name="logo-whatsapp" class="w-10"></ion-icon>
+        </section>
+        <section></section>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </article>
+</body>
+
+</html>
