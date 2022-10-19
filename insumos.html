@@ -58,6 +58,15 @@
                 transition:.5s;
                 transform:translatex(0%);
             }
+            .edit{
+                transition:.5s;
+                transform:translatex(100%);
+    box-shadow:0 3px 10px rgba(0, 0, 0, 0.6);
+            }
+            .edit.active{
+                transition:.5s;
+                transform:translatex(0%);
+            }
             .reg-bg{
                 transition:backdrop-filter .5s, transform 0s;
                 transition-delay:0s, .5s;
@@ -69,6 +78,9 @@
     backdrop-filter: blur(5px);
                 transform:translatex(0%);
                 transition:backdrop-filter .5s, transform 0s;
+            }
+            .deleted{
+                transform: translateX(90%);
             }
         }
     </style>
@@ -209,6 +221,61 @@
                 class="bg-redd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-redl">Continuar</button>
         </div>
     </div>
+    <div class="edit h-full w-152 absolute mt-0 p-0 z-30 right-0 bg-white dark:bg-darkgrayl">
+        <div class="p-10">
+            <div class="text-7xl text-black-100 flex mt-10 items-center justify-center">
+                <ion-icon name="person-add" class="ion-title text-black-100 mr-5 dark:text-white"></ion-icon>
+                <p class="text-subtitle">Editar usuarios</p>
+            </div>
+            <form class="mt-14 flex justify-center">
+                <div class="mb-12 mr-16">
+                    <label for="document">Tipo de Documento</label><br>
+                    <select name="document" id="document"
+                        class="mb-8 border-solid border border-black bg-transparent dark:border-white">
+                        <option value="Cedula de Ciudadania">Cedula de Ciudadania</option>
+                        <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                        <option value="Cedula de Extranjeria">Cedula de Extranjeria</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                    </select>
+                    <br>
+                    <label for="n-document">Numero de documento</label><br>
+                    <input type="text" id="n-document" placeholder="xxxxxxxxxx" required
+                        class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd">
+                    <br>
+                    <label for="name and last">Nombres y Apellidos</label><br>
+                    <input type="text" id="name and last" placeholder="Pepito Perez"
+                        class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd">
+                    <br>
+                    <label for="Cargo">Tipo de Documento</label><br>
+                    <select name="Cargo" id="Cargo" class="mb-8 bg-transparent border-solid border dark:border-white">
+                        <option value="Administrador">Administrador</option>
+                        <option value="Mecánico">Mecánico</option>
+                    </select>
+                </div>
+                <div class="">
+                    <label for="password">Contraseña</label><br>
+                    <input type="password" id="password" pattern=".{8,}" maxlength="15" required
+                        class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
+                    <label for="con-password"> Confirmar Contraseña</label><br>
+                    <input type="password" id="con-password" pattern=".{8,}" maxlength="15" required
+                        class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
+                    <label for="question">Escribe tu pregunta</label><br>
+                    <input type="text" id="question"
+                        class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
+                    <label for="answer">Escribe tu respuesta</label><br>
+                    <input type="text" id="answer"
+                        class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
+                </div>
+            </form>
+        </div>
+
+        <div class="flex justify-center gap-6 ml-72">
+            <button
+                class="cancel-edit-button bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-grayl">Cancelar</button>
+            <button
+                class="bg-redd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-redl">Continuar</button>
+        </div>
+    </div>
     </div>
     <div class="mx-16 pt-16">
         <div class="">
@@ -217,7 +284,9 @@
                 <p class="text-title">Insumos</p>
             </div>
         </div>
-        <div class="flex justify-center">
+
+
+        <div class="stable flex justify-center">
             <div class="mt-8 h-160 flex">
                 <div class="p-7 shadow-xl mr-5 rounded-3xl bg-white dark:bg-darkgrayl">
                     <form action="" class="search-form h-10 flex w-full justify-end items-center mb-3 pr-5">
@@ -324,11 +393,13 @@
                                 <ion-icon name="download-outline" class="ion-submenu mr-2"></ion-icon>
                                 <p>Exportar</p>
                             </button>
-                            <button type="button"
+                            <a href="insumos-del.html" target="display">
+                                <button type="button"
                                 class="reg-button flex justify-center items-center w-28 h-12 bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-l">
                                 <ion-icon name="trash-outline" class="ion-submenu mr-2"></ion-icon>
                                 <p>Ocultos</p>
                             </button>
+                            </a>
                         </div>
                     </div>
                     <div class="flex justify-center items-center">

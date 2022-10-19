@@ -1,7 +1,9 @@
 let regbutton = document.querySelector('.reg-button');
 let reg = document.querySelector('.reg');
+let edit = document.querySelector('.edit');
 let regbg = document.querySelector('.reg-bg');
 let cancelregbutton = document.querySelector('.cancel-reg-button');
+let canceleditbutton = document.querySelector('.cancel-edit-button');
 let listselectall = document.querySelector('.list-select-all');
 let editbutton = document.querySelector('.edit-button');
 let exportbutton = document.querySelector('.export-button');
@@ -15,11 +17,24 @@ regbutton.onclick = function () {
     regbg.classList.toggle('active')
 }
 regbg.onclick = function () {
-    reg.classList.toggle('active')
-    regbg.classList.toggle('active')
+    reg.classList.remove('active')
+    edit.classList.remove('active')
+    regbg.classList.remove('active')
 }
 cancelregbutton.onclick = function () {
     reg.classList.toggle('active')
+    regbg.classList.toggle('active')
+}
+canceleditbutton.onclick = function () {
+    edit.classList.toggle('active')
+    regbg.classList.toggle('active')
+}
+editbutton.onclick = function () {
+    edit.classList.add('active')
+    regbg.classList.add('active')
+}
+canceleditbutton.onclick = function () {
+    edit.classList.toggle('active')
     regbg.classList.toggle('active')
 }
 listselectall.onclick = function () {
