@@ -30,8 +30,13 @@ canceleditbutton.onclick = function () {
     regbg.classList.toggle('active')
 }
 editbutton.onclick = function () {
-    edit.classList.add('active')
-    regbg.classList.add('active')
+    if (editbutton.disabled == true) {
+
+    }else{
+        edit.classList.add('active')
+        regbg.classList.add('active')
+    }
+    
 }
 canceleditbutton.onclick = function () {
     edit.classList.toggle('active')
@@ -73,6 +78,23 @@ function checkchecks(){
     }else{
         listselectall.classList.remove('rotating')
         listselectall.classList.add('no-rotating')
+    }
+
+    if (uncheck==1){
+        editbutton.disabled = false
+        editbutton.classList.remove('bg-grayd')
+        editbutton.classList.add('bg-redd')
+        editbutton.classList.add('text-white')
+        editbutton.classList.remove('text-gray-500')
+        editbutton.classList.add('hover:shadow-list')
+        editbutton.classList.add('dark:bg-darkredd')
+    }else{
+        editbutton.classList.add('bg-grayd')
+        editbutton.classList.add('text-gray-500')
+        editbutton.classList.remove('hover:shadow-list')
+        editbutton.disabled = true
+        editbutton.classList.remove('dark:bg-darkredd')
+        editbutton.classList.remove('bg-redd')
     }
 }
 

@@ -191,9 +191,10 @@
                     <input type="text" id="name and last" placeholder="Pepito Perez"
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd">
                     <br>
-                    <label for="Cargo">Tipo de Documento</label><br>
-                    <select name="Cargo" id="Cargo" class="mb-8 bg-transparent border-solid border dark:border-white">
+                    <label for="Cargo">Cargo</label><br>
+                    <select name="Cargo" id="Cargo" class="mb-8 bg-transparent border-solid border border-black dark:border-white">
                         <option value="Administrador">Administrador</option>
+                        <option value="Administrador">Trabajador</option>
                         <option value="Mecánico">Mecánico</option>
                     </select>
                 </div>
@@ -204,27 +205,25 @@
                     <label for="con-password"> Confirmar Contraseña</label><br>
                     <input type="password" id="con-password" pattern=".{8,}" maxlength="15" required
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
-                    <label for="question">Escribe tu pregunta</label><br>
+                    <label for="question">Pregunta clave</label><br>
                     <input type="text" id="question"
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
-                    <label for="answer">Escribe tu respuesta</label><br>
+                    <label for="answer">Respuesta</label><br>
                     <input type="text" id="answer"
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
                 </div>
             </form>
         </div>
 
-        <div class="flex justify-center gap-6 ml-72">
-            <button
-                class="cancel-reg-button bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-grayl">Cancelar</button>
-            <button
-                class="bg-redd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-redl">Continuar</button>
-        </div>
+        <div class="flex justify-center gap-6 right-10 absolute bottom-16">
+            <button class="cancel-reg-button bg-grayd text-white w-20 h-10 rounded">Cancelar</button>
+            <button class="bg-redd dark:bg-darkredd text-white w-20 h-10 rounded">Continuar</button>
+          </div>
     </div>
     <div class="edit h-full w-152 absolute mt-0 p-0 z-30 right-0 bg-white dark:bg-darkgrayl">
         <div class="p-10">
             <div class="text-7xl text-black-100 flex mt-10 items-center justify-center">
-                <ion-icon name="person-add" class="ion-title text-black-100 mr-5 dark:text-white"></ion-icon>
+                <ion-icon name="create" class="ion-title text-black-100 mr-5 dark:text-white"></ion-icon>
                 <p class="text-subtitle">Editar usuarios</p>
             </div>
             <form class="mt-14 flex justify-center">
@@ -246,9 +245,10 @@
                     <input type="text" id="name and last" placeholder="Pepito Perez"
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd">
                     <br>
-                    <label for="Cargo">Tipo de Documento</label><br>
-                    <select name="Cargo" id="Cargo" class="mb-8 bg-transparent border-solid border dark:border-white">
+                    <label for="Cargo">Cargo</label><br>
+                    <select name="Cargo" id="Cargo" class="mb-8 bg-transparent border-solid border border-black dark:border-white">
                         <option value="Administrador">Administrador</option>
+                        <option value="Administrador">Trabajador</option>
                         <option value="Mecánico">Mecánico</option>
                     </select>
                 </div>
@@ -259,22 +259,21 @@
                     <label for="con-password"> Confirmar Contraseña</label><br>
                     <input type="password" id="con-password" pattern=".{8,}" maxlength="15" required
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
-                    <label for="question">Escribe tu pregunta</label><br>
+                    <label for="question">Pregunta clave</label><br>
                     <input type="text" id="question"
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
-                    <label for="answer">Escribe tu respuesta</label><br>
+                    <label for="answer">Respuesta</label><br>
                     <input type="text" id="answer"
                         class="mb-8 outline-0 border-black border-b bg-transparent dark:border-redd"><br>
                 </div>
             </form>
         </div>
 
-        <div class="flex justify-center gap-6 ml-72">
-            <button
-                class="cancel-edit-button bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-grayl">Cancelar</button>
-            <button
-                class="bg-redd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-redl">Continuar</button>
-        </div>
+        <div class="flex justify-center gap-6 right-10 absolute bottom-16">
+            <button class="delete-edit-button bg-grayd text-white w-24 h-10 rounded mr-52  ">Desactivar</button>
+            <button class="cancel-edit-button bg-grayd text-white w-20 h-10 rounded">Cancelar</button>
+            <button class="bg-redd dark:bg-darkredd text-white w-20 h-10 rounded">Continuar</button>
+          </div>
     </div>
     </div>
     <div class="mx-16 pt-16">
@@ -327,10 +326,10 @@
                                         onclick="checkchecks()">
                                 </td>
                                 <td class="w-16 h-12 mr-5 rounded flex justify-center items-center text-xl">1</td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Juan Becerra
                                 </td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">3125433587</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Admin</td>
                                 </td>
                             </tr>
                             <tr class="flex border-b gap-20">
@@ -338,8 +337,8 @@
                                     <input type="checkbox" class="listcheck dark:accent-darkredd"
                                         onclick="checkchecks()">
                                 </td>
-                                <td class="w-16 h-12 mr-5 rounded flex justify-center items-center text-xl">1</td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                                <td class="w-16 h-12 mr-5 rounded flex justify-center items-center text-xl">2</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Kevin Lopez
                                 </td>
                                 <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">3103574569</td>
                                 <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Admin</td>
@@ -350,11 +349,11 @@
                                     <input type="checkbox" class="listcheck dark:accent-darkredd"
                                         onclick="checkchecks()">
                                 </td>
-                                <td class="w-16 h-12 mr-5 rounded flex justify-center items-center text-xl">1</td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                                <td class="w-16 h-12 mr-5 rounded flex justify-center items-center text-xl">3</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Eimer Cortés
                                 </td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
-                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">3154689745</td>
+                                <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Admin</td>
                                 </td>
                             </tr>
                         </tbody>
@@ -369,20 +368,19 @@
                                 <p>Añadir</p>
                             </button>
                             <button type="button"
-                                class="edit-button flex justify-center items-center w-28 h-12 bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 mb-2 focus:bg-l">
+                                class="edit-button flex justify-center items-center w-28 h-12 bg-grayd text-gray-500 w-20 h-10 rounded  duration-200 mb-2 focus:bg-l" disabled>
                                 <ion-icon name="create-outline" class="ion-submenu mr-2"></ion-icon>
                                 <p>Editar</p>
                             </button>
                         </div>
                         <div class="flex gap-2">
-                            <button type="button"
-                                class="export-button reg-button flex justify-center items-center w-28 h-12 bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-l">
+                            <button type="button" class="export-button reg-button flex justify-center items-center w-28 h-12 bg-redd dark:bg-darkredd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-l">
                                 <ion-icon name="download-outline" class="ion-submenu mr-2"></ion-icon>
                                 <p>Exportar</p>
                             </button>
                             <a href="usuarios-del.html" target="display">
                                 <button type="button"
-                                class="reg-button flex justify-center items-center w-28 h-12 bg-grayd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-l">
+                                class="reg-button flex justify-center items-center w-28 h-12 bg-redd dark:bg-darkredd text-white w-20 h-10 rounded hover:shadow-list duration-200 focus:bg-l">
                                 <ion-icon name="trash-outline" class="ion-submenu mr-2"></ion-icon>
                                 <p>Ocultos</p>
                             </button>
@@ -423,7 +421,7 @@
                                 <tbody>
                                     <tr class="flex border-b gap-2">
                                         <td class="w-12 h-12 rounded flex justify-center items-center text-xl">1</td>
-                                        <td class="w-20 h-12 rounded flex justify-center items-center text-xl">Aceite 1L
+                                        <td class="w-20 h-12 rounded flex justify-center items-center text-xl overflow-hidden">Juan Becerra
                                         </td>
                                         <td class="w-20 h-12 rounded flex justify-center items-center text-xl">3456551366</td>
                                     </tr>
