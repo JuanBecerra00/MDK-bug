@@ -46,6 +46,7 @@ tailwind.config = {
           },
           boxShadow: {
               'list': '0 3px 10px rgba(0, 0, 0, 0.6);',
+              'cards': '0 8px 20px rgba(0, 0, 0, 0.6);',
               'custom': '0 0 5px 0px rgba(0, 0, 0, 0.6);',
               '5xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25);'
           }
