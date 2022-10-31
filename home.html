@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
@@ -30,7 +31,7 @@
             transition-delay: 1.2s, .7s, .5s, .7s, .7s;
             font-size:14px;
         }
-        .header-submenu-button.active ~ .header-submenu{
+        .header-submenu.active{
             width: 120px;
             height: 140px;
             border-radius: 5px;
@@ -40,19 +41,19 @@
         .arrowtop{
             left:calc(50% - 8px);
         }
-        .header-submenu-button.active ~ .header-submenu .arrowtop{
+        .header-submenu.active .arrowtop{
             top:-5px;
         }
         .header-submenu li{
             transition-delay:calc(0s + var(--i));
         }
-        .header-submenu-button.active ~ .header-submenu li{
+        .header-submenu.active li{
             opacity:1;
             visibility:visible;
             transition:.5s;
             transition-delay:calc(1s + var(--i));
         }
-        .header-submenu-button.active ~ .header-submenu a:hover{
+        .header-submenu.active a:hover{
             transition-delay: 0s;
             transition:.5s;
             background:#221e1e;
@@ -65,6 +66,17 @@
             10% {
                 transform:scale(.9);
             }
+        }
+        .header-submenu-button-locker{
+            transition: .7s;
+        }
+        .header-submenu-button-locker.active{
+            width: 133px;
+            height: 50px;
+            transition: 0;
+        }
+        .header-submenu-button-locker.active:hover{
+            border: 1px solid #b81d28;
         }
         }
     </style>
@@ -104,9 +116,65 @@
                 transform: translateX(0%);
             }
         }
+        .images-dot0{
+            animation: passdot 20s infinite;
+        }
+        @keyframes passdot {
+            15%{
+                width: .5rem;
+            }
+            17%{
+                transform: translateX(0);
+                width: 1.8rem;
+            }
+            20%{
+                transform: translateX(calc(+1.25em));
+                width: .5rem;
+            }
+            
+            35%{
+                width: .5rem;
+            }
+            37%{
+                transform: translateX(calc(+1.25em));
+                width: 1.8rem;
+            }
+            40%{
+                transform: translateX(2.5em);
+                width: .5rem;
+            }
+            55%{
+                width: .5rem;
+            }
+            57%{
+                transform: translateX(2.5rem);
+                width: 1.8rem;
+            }
+            60%{
+                transform: translateX(3.75em);
+                width: .5rem;
+            }
+            75%{
+                width: .5rem;
+            }
+            77%{
+                transform: translateX(3.75rem);
+                width: 1.8rem;
+            }
+            80%{
+                transform: translateX(5em);
+                width: .5rem;
+            }
+            95%{
+                transform: translateX(5em);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
     </style>
 </head>
-<body>
+<body class="bg-black">
     <header class="bg-grayd fixed w-screen flex px-20 place-content-between items-center z-50 overflow-visible h-20">
         <a href=""><img src="assets/img/logo.svg" alt="X" class="header-logo h-8" tabindex="1"></a>
         <ul class="header-modules flex text-white items-center text-header gap-5">
@@ -126,32 +194,36 @@
                 <div class="header-submenu-div relative flex justify-center">
                     <button
                         class="header-submenu-button flex align-center p-1.5 duration-500 flex items-center gap-2 border border-grayd rounded hover:border-redd cursor-pointer px-3" tabindex="1">
+                        
                         <ion-icon name="person" style="font-size: 24px;"></ion-icon>
                     <div>
                         <strong>Juan Becerra</strong>
                         <p>Administrador</p>
                     </div>
                     </button>
+                    <button
+                        class="header-submenu-button-locker absolute -ml-2 opacity-0 border-grayd rounded" tabindex="1">
+                    </button>
                     <div class="header-submenu absolute w-7 h-7 bg-grayd rounded-2xl ease-in-out shadow-custom" tabindex="1">
                         <div
                             class="arrowtop absolute w-4 h-4 bg-grayd top-1 rotate-45 rounded-sm duration-500 delay-700 ease-in-out flex">
                         </div>
                         <ul class="header-submenu-ul flex flex-col m-5">
-                            <li style="--i:0s;" class="settingslogo opacity-0 invisible duration-500">
+                            <li style="--i:0s;" class="submenu-profile opacity-0 invisible duration-500">
                                 <a href="#" class="flex items-center mb-2.5 duration-500" tabindex="1">
                                     <span class="w-7 mr-2.5 flex justify-center">
                                         <ion-icon name="person" class="ion"></ion-icon>
                                     </span> <span for="">Perfil</span>
                                 </a>
                             </li>
-                            <li style="--i:0.1s;" class="helplogo opacity-0 invisible duration-500">
+                            <li style="--i:0.1s;" class="submenu-settings opacity-0 invisible duration-500">
                                 <a href="#" class=" flex items-center mb-2.5 duration-500" tabindex="1">
                                     <span class="w-7 mr-2.5 flex justify-center">
                                         <ion-icon name="cog" class="ion"></ion-icon>
                                     </span> <span for="">Ajustes</span>
                                 </a>
                             </li>
-                            <li style="--i:0.2s;" class="exitlogo opacity-0 invisible duration-500">
+                            <li style="--i:0.2s;" class="submenu-exit opacity-0 invisible duration-500">
                                 <a href="index.html" class="flex items-center mb-2.5 duration-500" tabindex="1">
                                     <span class="w-7 mr-2.5 flex justify-center">
                                         <ion-icon name="exit" class="ion"></ion-icon>
@@ -166,13 +238,13 @@
         </ul>
     </header>
     <main class="">
-        <div class="h-128 w-full overflow-hidden flex justify-center items-center bg-center">
+        <div class="h-128 w-full overflow-hidden flex justify-center items-center">
             <div class="images flex items-center w-auto fixed -z-10">
-                <img src="https://unsplash.com/photos/aiwuLjLPFnU/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODg0MzIw&force=true&w=1920" alt="" class=" -z-10 blur">
-                <img src="https://unsplash.com/photos/3ZUsNJhi_Ik/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODg1OTk1&force=true&w=1920" alt="" class=" -z-10 blur">
-                <img src="https://unsplash.com/photos/KQjBXXPRsYM/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODg5MzM1&force=true&w=1920" alt="" class=" -z-10 blur">
-                <img src="https://unsplash.com/photos/gts_Eh4g1lk/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODg3Mjk2&force=true&w=1920" alt="" class=" -z-10 blur">
-                <img src="https://unsplash.com/photos/u6BPMXgURuI/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjY2ODg5MzU3&force=true&w=1920" alt="" class=" -z-10 blur">
+                <img src="assets/img/home-images/1.jpg" alt="" class=" -z-10 blur">
+                <img src="assets/img/home-images/2.jpg" alt="" class=" -z-10 blur">
+                <img src="assets/img/home-images/3.jpg" alt="" class=" -z-10 blur">
+                <img src="assets/img/home-images/4.jpg" alt="" class=" -z-10 blur">
+                <img src="assets/img/home-images/5.jpg" alt="" class=" -z-10 blur">
             </div>
         <img src="" alt="" class="blur">
         <div class="h-32 w-32 z-10 absolute">
@@ -180,52 +252,74 @@
             <p class="flex justify-center text-white text-3xl mt-5 font-semibold">MDK</p>
         </div>
         </div>
+        <div class="w-full h-5 flex justify-center items-center gap-3 mb-3">
+            <div class="flex justify-start w-24 h-2 absolute px-1">
+            <div class="images-dot0 w-2 h-2 bg-white rounded"></div>
+            </div>
+            <div class="images-dot1 w-2 h-2 bg-white rounded opacity-50 cursor-pointer"></div>
+            <div class="images-dot2 w-2 h-2 bg-white rounded opacity-50 cursor-pointer"></div>
+            <div class="images-dot3 w-2 h-2 bg-white rounded opacity-50 cursor-pointer"></div>
+            <div class="images-dot4 w-2 h-2 bg-white rounded opacity-50 cursor-pointer"></div>
+            <div class="images-dot5 w-2 h-2 bg-white rounded opacity-50 cursor-pointer"></div>
+        </div>
         <div class="h-96 w-full flex justify-center items-center gap-8 text-white bg-white">
-            <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
-                <div class=" w-full flex justify-center items-center mt-8">
-                    <ion-icon name="person" class="ion-card"></ion-icon>
-                </div>
-                <div class="w-full h-12 flex justify-center items-center text-3xl">Usuarios</div>
-                <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
-            </button>
-            <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
-                <div class=" w-full flex justify-center items-center mt-8">
-                    <ion-icon name="people" class="ion-card"></ion-icon>
-                </div>
-                <div class="w-full h-12 flex justify-center items-center text-3xl">Clientes</div>
-                <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
-            </button>
-            <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
-                <div class=" w-full flex justify-center items-center mt-8">
-                    <ion-icon name="car" class="ion-card"></ion-icon>
-                </div>
-                <div class="w-full h-12 flex justify-center items-center text-3xl">Vehiculos</div>
-                <div class="w-full h-32 flex text-center pt-3 text-md px-10">Vehiculos de los clientes</div>
-            </button>
-            <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
-                <div class=" w-full flex justify-center items-center mt-8">
-                    <ion-icon name="cart" class="ion-card"></ion-icon>
-                </div>
-                <div class="w-full h-12 flex justify-center items-center text-3xl">Proveedores</div>
-                <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
-            </button>
-            <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
-                <div class=" w-full flex justify-center items-center mt-8">
-                    <ion-icon name="file-tray-full" class="ion-card"></ion-icon>
-                </div>
-                <div class="w-full h-12 flex justify-center items-center text-3xl">Insumos</div>
-                <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
-            </button>
-            <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
-                <div class=" w-full flex justify-center items-center mt-8">
-                    <ion-icon name="receipt" class="ion-card"></ion-icon>
-                </div>
-                <div class="w-full h-12 flex justify-center items-center text-3xl">Facturación</div>
-                <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
-            </button>
+            <a href="inicio.html">
+                <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
+                    <div class=" w-full flex justify-center items-center mt-8">
+                        <ion-icon name="person" class="ion-card"></ion-icon>
+                    </div>
+                    <div class="w-full h-12 flex justify-center items-center text-3xl">Usuarios</div>
+                    <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
+                </button>
+            </a>
+            <a href="">
+                <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
+                    <div class=" w-full flex justify-center items-center mt-8">
+                        <ion-icon name="people" class="ion-card"></ion-icon>
+                    </div>
+                    <div class="w-full h-12 flex justify-center items-center text-3xl">Clientes</div>
+                    <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
+                </button>
+            </a>
+            <a href="">
+                <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
+                    <div class=" w-full flex justify-center items-center mt-8">
+                        <ion-icon name="car" class="ion-card"></ion-icon>
+                    </div>
+                    <div class="w-full h-12 flex justify-center items-center text-3xl">Vehiculos</div>
+                    <div class="w-full h-32 flex text-center pt-3 text-md px-10">Vehiculos de los clientes</div>
+                </button>
+            </a>
+            <a href="">
+                <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
+                    <div class=" w-full flex justify-center items-center mt-8">
+                        <ion-icon name="cart" class="ion-card"></ion-icon>
+                    </div>
+                    <div class="w-full h-12 flex justify-center items-center text-3xl">Proveedores</div>
+                    <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
+                </button>
+            </a>
+            <a href="">
+                <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
+                    <div class=" w-full flex justify-center items-center mt-8">
+                        <ion-icon name="file-tray-full" class="ion-card"></ion-icon>
+                    </div>
+                    <div class="w-full h-12 flex justify-center items-center text-3xl">Insumos</div>
+                    <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
+                </button>
+            </a>
+            <a href="">
+                <button class="bg-redd h-72 w-56 rounded-md hover:shadow-cards duration-200 hover:-mt-10">
+                    <div class=" w-full flex justify-center items-center mt-8">
+                        <ion-icon name="receipt" class="ion-card"></ion-icon>
+                    </div>
+                    <div class="w-full h-12 flex justify-center items-center text-3xl">Facturación</div>
+                    <div class="w-full h-32 flex text-center pt-3 text-md px-10">Personal que trabaja en la empresa</div>
+                </button>
+            </a>
         </div>
         
-        <div class="bg-white h-screen w-full">
+        <div class="bg-white h-112 w-full">
 
         </div>
     </main>
@@ -240,5 +334,6 @@
     <script src="script/tailwind.config.js">
     </script>
     <script src="script/script.js"></script>
+    <script src="script/homedots.js"></script>
 </body>
 </html>

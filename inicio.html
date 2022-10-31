@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administración</title>
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
     <script>
         let html = document.querySelector('html');
         let x = document.cookie;
@@ -33,6 +34,9 @@
         .ion-small{
             font-size:20px;
         }
+        .ion-card{
+            font-size:82px;
+        }
         .ion-separator{
             font-size:30px;
         }
@@ -42,7 +46,7 @@
             transition-delay: 1.2s, .7s, .5s, .7s, .7s;
             font-size:14px;
         }
-        .header-submenu-button.active ~ .header-submenu{
+        .header-submenu.active{
             width: 120px;
             height: 140px;
             border-radius: 5px;
@@ -52,19 +56,19 @@
         .arrowtop{
             left:calc(50% - 8px);
         }
-        .header-submenu-button.active ~ .header-submenu .arrowtop{
+        .header-submenu.active .arrowtop{
             top:-5px;
         }
         .header-submenu li{
             transition-delay:calc(0s + var(--i));
         }
-        .header-submenu-button.active ~ .header-submenu li{
+        .header-submenu.active li{
             opacity:1;
             visibility:visible;
             transition:.5s;
             transition-delay:calc(1s + var(--i));
         }
-        .header-submenu-button.active ~ .header-submenu a:hover{
+        .header-submenu.active a:hover{
             transition-delay: 0s;
             transition:.5s;
             background:#221e1e;
@@ -77,6 +81,17 @@
             10% {
                 transform:scale(.9);
             }
+        }
+        .header-submenu-button-locker{
+            transition: .7s;
+        }
+        .header-submenu-button-locker.active{
+            width: 133px;
+            height: 50px;
+            transition: 0;
+        }
+        .header-submenu-button-locker.active:hover{
+            border: 1px solid #b81d28;
         }
         }
     </style>
@@ -253,11 +268,11 @@
 </head>
 
 <body class="bg-white dark:bg-darkgrayd duration-500">
-    <header class="bg-grayd flex px-20 place-content-between items-center overflow-visible -z-10  h-20">
-        <a href=""><img src="assets/img/logo.svg" alt="X" class="header-logo h-8"></a>
+    <header class="bg-grayd fixed w-screen flex px-20 place-content-between items-center z-50 overflow-visible h-20">
+        <a href="home.html"><img src="assets/img/logo.svg" alt="X" class="header-logo h-8" tabindex="1"></a>
         <ul class="header-modules flex text-white items-center text-header gap-5">
             <li>
-                <a href="">
+                <a href="" tabindex="1">
                     <div class="flex align-center rounded-2xl p-1.5 duration-500 hover:bg-redd">
                         <ion-icon name="help" class="ion-small"></ion-icon>
                     </div>
@@ -271,34 +286,38 @@
             <li class="submenu-li ">
                 <div class="header-submenu-div relative flex justify-center">
                     <button
-                        class="header-submenu-button flex align-center p-1.5 duration-500 flex items-center gap-2 border border-grayd rounded hover:border-redd cursor-pointer px-3">
+                        class="header-submenu-button flex align-center p-1.5 duration-500 flex items-center gap-2 border border-grayd rounded hover:border-redd cursor-pointer px-3" tabindex="1">
+                        
                         <ion-icon name="person" style="font-size: 24px;"></ion-icon>
                     <div>
                         <strong>Juan Becerra</strong>
                         <p>Administrador</p>
                     </div>
                     </button>
-                    <div class="header-submenu absolute w-7 h-7 bg-grayd rounded-2xl -z-10 ease-in-out shadow-custom" tabindex="1">
+                    <button
+                        class="header-submenu-button-locker absolute -ml-2 opacity-0 border-grayd rounded" tabindex="1">
+                    </button>
+                    <div class="header-submenu absolute w-7 h-7 bg-grayd rounded-2xl ease-in-out shadow-custom" tabindex="1">
                         <div
                             class="arrowtop absolute w-4 h-4 bg-grayd top-1 rotate-45 rounded-sm duration-500 delay-700 ease-in-out flex">
                         </div>
                         <ul class="header-submenu-ul flex flex-col m-5">
-                            <li style="--i:0s;" class="settingslogo opacity-0 invisible duration-500">
-                                <a href="#" class="flex items-center mb-2.5 duration-500">
+                            <li style="--i:0s;" class="submenu-profile opacity-0 invisible duration-500">
+                                <a href="#" class="flex items-center mb-2.5 duration-500" tabindex="1">
                                     <span class="w-7 mr-2.5 flex justify-center">
                                         <ion-icon name="person" class="ion"></ion-icon>
                                     </span> <span for="">Perfil</span>
                                 </a>
                             </li>
-                            <li style="--i:0.1s;" class="helplogo opacity-0 invisible duration-500">
-                                <a href="#" class=" flex items-center mb-2.5 duration-500">
+                            <li style="--i:0.1s;" class="submenu-settings opacity-0 invisible duration-500">
+                                <a href="#" class=" flex items-center mb-2.5 duration-500" tabindex="1">
                                     <span class="w-7 mr-2.5 flex justify-center">
                                         <ion-icon name="cog" class="ion"></ion-icon>
                                     </span> <span for="">Ajustes</span>
                                 </a>
                             </li>
-                            <li style="--i:0.2s;" class="exitlogo opacity-0 invisible duration-500">
-                                <a href="index.html" class="flex items-center mb-2.5 duration-500">
+                            <li style="--i:0.2s;" class="submenu-exit opacity-0 invisible duration-500">
+                                <a href="index.html" class="flex items-center mb-2.5 duration-500" tabindex="1">
                                     <span class="w-7 mr-2.5 flex justify-center">
                                         <ion-icon name="exit" class="ion"></ion-icon>
                                     </span> <span for="">Salir</span>
@@ -383,7 +402,7 @@
             </span>
         </section>
     </aside>
-    <iframe src="Usuarios.html" frameborder="0" class="iframe active -z-10 absolute right-0 duration-500 bg-transparent"
+    <iframe src="Usuarios.html" frameborder="0" class="iframe mt-12 active -z-10 absolute right-0 duration-500 bg-transparent"
         name="display"></iframe>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
