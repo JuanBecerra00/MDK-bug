@@ -57,51 +57,46 @@
                 color:black;
             }
             .error-message{
+                
                 transform:translateY(-35px);
                 font-size:10px;
                 transition-delay:var(--i);
             }
+            
+        .login-container.no{
+            height: 100%;
+            
+        }
+            .login-container.no .logo-div{
+                opacity: 0;
+            }
             .login-container.no .login-form-container{
-                height:400px;
-                width:320px;
+                width:100vw;
+                height: 100%;
+                border-radius: 0 0 0 0;
                 transition: height .5s, width .5s;
                 transition-delay: .5s, 0s;
             }
-            
-            .login-container.no .recover{
-                padding:15px 30px;
-                height:400px;
-                background: #FFF;
-                width:320px;
-                transition: height .5s, width .5s, padding .5s;
-                transition-delay: .5s, 0s, 0s;
-                z-index:10;
-            }
-            
         .recover-content{
             margin-top:20px;
         }
         
         .login-container.no .recover-form-l{
             bottom:500px;
-            width:250px;
             height:380px;
         }
         .login-container.no .recover-form-r{
             bottom:500px;
-            width:250px;
             height:248px;
         }
         .recover-form-l{
             bottom:500px;
             height:0;
-            width:0;
             overflow:hidden;
         }
         .recover-form-r{
             bottom:500px;
             height:0;
-            width:0;
             overflow:hidden;
         }
         
@@ -137,17 +132,6 @@
                 transition: height .5s, width .5s;
                 transition-delay: .5s, 0s;
             }
-            
-            .login-container.no .recover{
-                padding:40px;
-                height:660px;
-                background: #FFF;
-                width:880px;
-                transition: height .5s, width .5s, padding .5s;
-                transition-delay: .5s, 0s, 0s;
-                z-index:10;
-            }
-            
             .recover-content{
                 margin-top:44px;
                 margin-left:25px;
@@ -204,6 +188,7 @@
             transition-delay: 0s;
         }
         .shake{
+            height: calc(30px - 10px);
             border:2px solid;
             border-color:red;
             border-radius:5px;
@@ -232,9 +217,6 @@
         .form-content{
             transition: opacity .5s;
             transition-delay:.7s;
-        }
-        .recover{
-            z-index:-50;
         }
         .recover-content{
             opacity:0;
@@ -265,9 +247,9 @@
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
 </head>
 
-<body class="">
+<body class="h-screen overflow-hidden">
     <div style="" class="w-full h-screen absolute -z-50 blur-sm bg-no-repeat bg-cover flex"></div>
-    <header class="absolute bg-grayd flex px-24 max-sm:px-10 place-content-between items-center w-screen">
+    <header class="bg-grayd flex px-24 max-sm:px-10 place-content-between items-center w-screen">
         <a href=""><img src="assets/img/logo.svg" alt="X" class="header-logo h-8"></a>
         <ul class="header-modules flex text-white items-center text-header gap-5 py-4">
             <li>
@@ -279,10 +261,10 @@
             </li>
         </ul>
     </header>
-    <div class="w-screen flex justify-center items-center h-screen">
+    <div class="w-screen h-screen flex justify-center">
         <div class="login-container absolute flex justify-center items-center">
-            <div class="w-full justify-center items-center">
-                <div class="flex justify-center mb-5">
+            <div class="">
+                <div class="logo-div flex justify-center mb-5">
                     <img src="assets/img/logo.svg" alt="X" class="login-container-logo-img w-20 top-14">
                 </div>
                 <div
@@ -328,49 +310,10 @@
                         </div>
                     </form>
                 </div>
-                <div
-                    class="recover absolute bg-black bottom-0 bg-white rounded-lg  w-112 max-sm:w-80 max-sm:h-80 h-96 max-sm:overflow-scroll">
-                    <div class="recover-content">
-                        <p class="title-recover max-sm:mb-8">Recuperar contraseña</p>
-                        <div class="recover-form flex max-sm:block">
-                            <div class="recover-form-l">
-                                <label>Tipo de documento</label><br>
-                                <select name="" id="" class="id-select mt-4 mb-8">
-                                    <option value="">CC</option>
-                                    <option value="">TI</option>
-                                    <option value="">A</option>
-                                </select><br>
-                                <label>Numero de documento</label><br>
-                                <input type="text" class="sm:mt-3 mb-8 max-sm:mb-5 h-9 w-72 border-b border-black outline-0"><br>
-                                <label for="">¿Cual era tu pregunta clave?</label><br>
-                                <select name="" id="" class="id-select mt-4 mb-8 max-sm:w-full">
-                                    <option value="">¿Cual era el nombre de tu primera mascota?</option>
-                                    <option value="">¿Cual era el nombre de tu primera mascota?</option>
-                                    <option value="">¿Cual era el nombre de tu primera mascota?</option>
-                                </select><br>
-                                <label for="">Respuesta</label><br>
-                                <input type="text" class="sm:mt-3 mb-8 max-sm:mb-5 h-9 w-72 border-b border-black outline-0"><br>
-                            </div>
-                            <div class="recover-form-r">
-                                <label>Nueva contraseña</label><br>
-                                <input type="text" class="mt-1 mb-8 h-9 w-72 border-b border-black outline-0"><br>
-                                <label>Confirmar Contraseña</label><br>
-                                <input type="text" class="sm:mt-3 mb-8 max-sm:mb-5 h-9 w-72 border-b border-black outline-0"><br>
-                                <div class="flex justify-center gap-5 max-sm:mt-6">
-                                    <button type="submit"
-                                    class="recover-button-cancel sm:absolute w-24 h-12 bg-grayd text-white rounded-md sm:bottom-0 sm:right-0 sm:mr-40 sm:mb-11 duration-300 hover:shadow-list">Cancelar</button>
-                                <button type="submit"
-                                    class="recover-button-continue sm:absolute w-24 h-12 bg-redd text-white rounded-md sm:bottom-0 sm:right-0 sm:mr-11 sm:mb-11 duration-300 hover:shadow-list">Continuar</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    <footer class="absolute bottom-0 bg-grayd w-full text-white h-8 flex items-center">
+</div>
+    <footer class="absolute bottom-0 bg-grayd w-full text-white h-8 flex items-center -z-50">
         <ul class="absolute flex gap-5 right-8">
             <li class=""><a href="" class="hover:underline">Empresa</a></li>
             <li class=""><a href="" class="hover:underline">Creditos</a></li>

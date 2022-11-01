@@ -16,6 +16,7 @@ tailwind.config = {
               'export': '20.7rem',
               'exporttop': '8rem',
               '112': '28rem',
+              '100': '25rem',
               '123.2': '31rem',
               '128': '32rem',
               '152': '38rem',
@@ -23,8 +24,11 @@ tailwind.config = {
               '286': '71.5rem',
               'custom': '30rem',
               'aside': '37.7rem',
-              '312': '78rem'
+              '312': '78rem',
 
+          },
+          height: {
+            'body': 'calc(100vh - 96px)'
           },
           colors: {
               redl: '#e50914',
