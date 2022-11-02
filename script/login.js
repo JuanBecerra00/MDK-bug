@@ -11,7 +11,6 @@ let xnewpwconfirm = document.querySelector('.error-x-new-pw-confirm');
 let eyes = document.querySelector('.error-eyes');
 let loginbutton = document.querySelector('.form-button-login');
 let fomrbuttonrecovercancel = document.querySelector('.form-button-recover-cancel');
-let forgot = document.querySelector('.forgot');
 let newpwsubmit = document.querySelector('.form-button-new-pw-submit');
 let errorid = document.querySelector('.error-message-id')
 let erroridrecover = document.querySelector('.error-message-id-recover')
@@ -124,9 +123,6 @@ loginbutton.onclick = function() {
         xpw.classList.remove('opacity-0')
         eyes.classList.add('error-visible')
     }
-}
-forgot.onclick = function () {
-    formcontainer.classList.add('recover')
 }
 newpwsubmit.onclick = function () {
     if (formnewpw.value!=formnewpwconfirm.value){
