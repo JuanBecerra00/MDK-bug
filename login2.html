@@ -96,6 +96,12 @@
             }
         }
       </style>
+      
+      <style>
+        .cards.step-1{
+            transform: translateX(43%);
+          }
+      </style>
     <title>Login</title>
     <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
 </head>
@@ -119,7 +125,7 @@
                 <img src="assets/img/logo.svg" alt="X" class="login-container-logo-img w-20 top-14">
                 <img src="assets/img/eyesblack.svg" alt="" class="error-eyes absolute mb-20 w-14 duration-500">
             </div>
-            <div class="flex gap-10">
+            <div class="cards step-1 flex gap-10">
                 <div
                     class="form-container bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
                     <form action="index.html" target="_self" class="login">
@@ -275,6 +281,61 @@
                     class="form-container bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
                     <form action="" target="_self" class="login">
                         <div class="form-content">
+                            <p class="form-title mt-4 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
+                                Contraseña</p>
+
+
+                            <p class="form-title mt-4 mb-4 max-sm:mt-2 max-sm:mb-8" style="font-size: 18px;;">La pregunta clave que seleccionaste en el registro es:</p>
+
+                            <label for="new-pw" class="verification">"Nombre de tu primera mascota"</label>
+                            <input type="number" required pattern=".{6,}"
+                                class="input-check-randomnumber w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
+                                placeholder=" " id="pw" maxlength="6">
+                            <label for="" class="error-x-new-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
+                                <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
+                            </label>
+                            <br><label for=""
+                                class="absolute error-message error-message-new-pw text-redl opacity-0 duration-500 mt-5"
+                                style="--i:0.2s;">Minimo 8 caracteres</label>
+
+
+
+
+                            <div class="flex items-start">
+                                <div
+                                    class="w-full flex justify-center mt-[2.1rem] max-sm:translate-x-0 max-sm:absolute max-sm:w-full max-sm:left-0 max-sm:mt-10 max-sm:justify-center max-sm:flex max-sm:px-10">
+                                    <div class="max-sm:w-[320px] max-sm:h-2 max-sm:justify-center flex gap-40">
+                                        <button type="button"
+                                            class="form-button-login w-24 h-12 max-sm:w-20 max-sm:h-12 bg-grayd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
+                                            <p class="max-sm:opacity-0">Atras</p>
+                                            <ion-icon name="arrow-forward"
+                                                class="absolute text-redd invisible max-sm:visible text-[24px]">
+                                            </ion-icon>
+                                        </button>
+
+
+
+                                        <button type="button"
+                                            class="check-randomnumber form-button-new-pw-submit w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
+                                            <p class="max-sm:opacity-0">Siguiente</p>
+                                            <ion-icon name="arrow-forward"
+                                                class="absolute text-redd invisible max-sm:visible text-[24px]">
+                                            </ion-icon>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+
+
+                <div
+                    class="form-container bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
+                    <form action="" target="" class="login">
+                        <div class="form-content">
                             <p class="form-title mt-5 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
                                 Contraseña</p>
 
@@ -304,7 +365,7 @@
                                                 class="absolute text-redd invisible max-sm:visible text-[24px]">
                                             </ion-icon>
                                         </button>
-                                        <button type=""
+                                        <button type="button"
                                             class="form-button-send-email w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
@@ -315,25 +376,6 @@
                                 </div>
                             </div>
                             <script src="https://smtpjs.com/v3/smtp.js">
-                            </script>
-
-                            <script>
-                                document.querySelector('.form-button-send-email').onclick = function () {
-                                    const buttonsendemail = document.querySelector('.form-button-send-email');
-                                    email = document.querySelector('.form-email-recover');
-
-
-                                    Email.send({
-                                        SecureToken: "f3a8a96c-3832-407b-8cf8-36a1f545d044",
-                                        To: email.value,
-                                        From: "megadatakit@gmail.com",
-                                        Subject: "Recuperar contraseña MDK",
-                                        Body: "123456 Es su codigo"
-                                    }).then(
-                                        message => alert(message)
-                                    );
-                                }
-
                             </script>
                         </div>
                     </form>
@@ -347,10 +389,11 @@
                             <p class="form-title mt-4 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
                                 Contraseña</p>
 
-                            <label for="new-pw" class="">Escriba el codigo de 6 digitos que llego a su correo</label>
-                            <input type="password" required pattern=".{8,}"
-                                class="form-new-pw w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
-                                placeholder=" " id="pw" maxlength="15">
+                            <label for="new-pw" class="verification">Escriba el codigo de 6 digitos que llego a su
+                                correo</label>
+                            <input type="number" required pattern=".{6,}"
+                                class="input-check-randomnumber w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
+                                placeholder=" " id="pw" maxlength="6">
                             <label for="" class="error-x-new-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
                             </label>
@@ -365,15 +408,18 @@
                                 <div
                                     class="w-full flex justify-center mt-[5rem] max-sm:translate-x-0 max-sm:absolute max-sm:w-full max-sm:left-0 max-sm:mt-10 max-sm:justify-center max-sm:flex max-sm:px-10">
                                     <div class="max-sm:w-[320px] max-sm:h-2 max-sm:justify-center flex gap-40">
-                                        <button type="submit"
+                                        <button type="button"
                                             class="form-button-login w-24 h-12 max-sm:w-20 max-sm:h-12 bg-grayd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Atras</p>
                                             <ion-icon name="arrow-forward"
                                                 class="absolute text-redd invisible max-sm:visible text-[24px]">
                                             </ion-icon>
                                         </button>
-                                        <button type="submit"
-                                            class="form-button-new-pw-submit w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
+
+
+
+                                        <button type="button"
+                                            class="check-randomnumber form-button-new-pw-submit w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
                                                 class="absolute text-redd invisible max-sm:visible text-[24px]">
@@ -389,7 +435,7 @@
 
 
 
-                
+
 
 
 
@@ -451,6 +497,9 @@
 
                 </div>
 
+
+
+
             </div>
         </div>
     </div>
@@ -463,6 +512,8 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/login.js">
+    </script>
+    <script src="script/login2.js">
     </script>
     <script src="script/tailwind.config.js">
     </script>
