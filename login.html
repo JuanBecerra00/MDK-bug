@@ -332,7 +332,7 @@
             </li>
         </ul>
     </header>
-    <div class="screen flex justify-center items-center w-screen h-body overflow-hidden">
+    <main class="screen flex justify-center items-center w-screen h-body overflow-hidden">
         <div class="content max-sm:-mt-20 duration-500">
             <div class="logo-div flex justify-center mb-5">
                 <img src="assets/img/logo.svg" alt="X" class="login-container-logo-img w-20 top-14">
@@ -360,7 +360,7 @@
 
                             <input type="password" required pattern=".{8,}"
                                 class="form-pw w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
-                                placeholder=" " id="pw" maxlength="15">
+                                placeholder=" " id="pw" maxlength="16">
                             <label for="" class="error-x-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
                             </label>
@@ -398,14 +398,14 @@
 
                 <div
                     class="card-2 duration-200 bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
-                    <form action="index.html" target="_self" class="login">
+                    <form action="#" target="_self" class="login">
                         <div class="form-content">
                             <p class="form-title mt-5 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
                                 Contraseña</p>
 
                             <label for="id-type" class=" placeholder-id text-gray cursor-text">Tipo de
                                 documento</label><br>
-                            <select name="" id="id-type" class="id-select mt-4 mb-5 border border-black">
+                            <select name="" id="id-type" class="recover-id-type mt-4 mb-5 border border-black">
                                 <option value="">CC</option>
                                 <option value="">TI</option>
                                 <option value="">A</option>
@@ -415,7 +415,7 @@
                             <label for="id-recover" class="">Numero de
                                 documento</label>
                             <input type="text" required pattern="[0-9]{8,}"
-                                class="form-id-recover w-80 max-sm:w-56 h-10 border-b border-black mb-5 max-sm:mb-9 outline-0"
+                                class="recover-id-input w-80 max-sm:w-56 h-10 border-b border-black mb-5 max-sm:mb-9 outline-0"
                                 placeholder=" " id="id-recover">
                             <label for="" class="error-x-id-recover absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
@@ -437,7 +437,7 @@
                                                 class="absolute text-redd invisible max-sm:visible text-[24px]">
                                             </ion-icon>
                                         </button>
-                                        <button type="button"
+                                        <button type="submit"
                                             class="recover-continue w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
@@ -513,7 +513,7 @@
 
                 <div
                     class="card-4 duration-200 bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
-                    <form action="" target="_self" class="login">
+                    <form action="#" target="_self" class="login">
                         <div class="form-content">
                             <p class="form-title mt-4 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
                                 Contraseña</p>
@@ -523,8 +523,8 @@
                                 pregunta clave que seleccionaste en el registro es:</p>
 
                             <label for="new-pw" class="verification">"Nombre de tu primera mascota"</label>
-                            <input type="number" required pattern=".{6,}"
-                                class="input-check-randomnumber w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
+                            <input type="text" required 
+                                class="recover-question-input w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
                                 placeholder=" " id="pw" maxlength="6">
                             <label for="" class="error-x-new-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
@@ -550,7 +550,7 @@
 
 
 
-                                        <button type="button"
+                                        <button type="submit"
                                             class="recover-local-continue w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
@@ -569,15 +569,15 @@
 
                 <div
                     class="card-5 duration-200 bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
-                    <form action="" target="" class="login">
+                    <form action="#" target="" class="login">
                         <div class="form-content">
                             <p class="form-title mt-5 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
                                 Contraseña</p>
 
                             <label for="new-pw" class=""> Escriba su correo</label>
                             <input type="text" required
-                                pattern="[a-z0-9._%+-]{8,}+@[a-z0-9._%+-]{8,}+\.[a-z0-9._%+-]{8,}"
-                                class="form-email-recover w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z.]{2,20}$"
+                                class="recover-email-input w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
                                 placeholder=" " id="pw">
                             <label for="" class="error-x-new-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
@@ -600,7 +600,7 @@
                                                 class="absolute text-redd invisible max-sm:visible text-[24px]">
                                             </ion-icon>
                                         </button>
-                                        <button type="button"
+                                        <button type="submit"
                                             class="recover-online-continue send-email w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
@@ -619,14 +619,14 @@
 
                 <div
                     class="card-6 duration-200 bg-white w-[26rem] max-sm:w-80 max-sm:h-[22rem] h-[25rem] max-sm:h-[19.5rem] p-10 bg-white rounded-lg flex justify-center">
-                    <form action="" target="_self" class="login">
+                    <form action="#" target="_self" class="login">
                         <div class="form-content">
                             <p class="form-title mt-4 mb-10 max-sm:mt-2 max-sm:mb-8" style="font-size: 24px;;">Recuperar
                                 Contraseña</p>
 
                             <label for="new-pw" class="verification">Escriba el codigo de 6 digitos que llego a su
                                 correo</label>
-                            <input type="number" required pattern=".{6,}"
+                            <input type="text" required pattern="[0-9]{6,}"
                                 class="checkrn w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
                                 placeholder=" " id="pw" maxlength="6">
                             <label for="" class="error-x-new-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
@@ -654,7 +654,7 @@
 
 
 
-                                        <button type="button"
+                                        <button type="submit"
                                             class="recover-code-continue check-randomnumber form-button-new-pw-submit w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
@@ -685,8 +685,8 @@
 
                             <label for="new-pw" class="">Nueva contraseña</label>
                             <input type="password" required pattern=".{8,}"
-                                class="form-new-pw w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
-                                placeholder=" " id="pw" maxlength="15">
+                                class="recover-new-pw w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
+                                placeholder=" " id="pw" maxlength="16">
                             <label for="" class="error-x-new-pw absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
                             </label>
@@ -696,8 +696,8 @@
 
                             <label for="new-pw-confirm" class="">Confirmar contraseña</label>
                             <input type="password" required pattern=".{8,}"
-                                class="form-new-pw-confirm w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
-                                placeholder=" " id="pw-confirm" maxlength="15">
+                                class="recover-new-pw-confirm w-80 max-sm:w-56 h-10 border-b border-black mb-5 outline-0"
+                                placeholder=" " id="pw-confirm" maxlength="16">
                             <label for=""
                                 class="error-x-new-pw-confirm absolute text-redl ion rotate-45 opacity-0 mt-1">
                                 <ion-icon name="add-outline" style="font-size: 30px;"></ion-icon>
@@ -718,7 +718,7 @@
                                                 class="absolute text-redd invisible max-sm:visible text-[24px]">
                                             </ion-icon>
                                         </button>
-                                        <button type="button"
+                                        <button type="submit"
                                             class="recover-new-password-continue w-24 h-12 max-sm:w-20 max-sm:h-12 bg-redd text-white rounded-md duration-300 hover:shadow-list mt-2 max-sm:w-20 max-sm:translate-x-0 max-sm:h-12 max-sm:absolute max-sm:bg-white flex justify-center items-center">
                                             <p class="max-sm:opacity-0">Siguiente</p>
                                             <ion-icon name="arrow-forward"
@@ -738,7 +738,11 @@
 
             </div>
         </div>
-    </div>
+        <div class="error-container w-40 h-12 bg-white absolute bottom-10 rounded text-redd flex justify-center items-center duration-200">
+            <ion-icon name="add" class="text-[30px] rotate-45"></ion-icon>
+            <p class="error-text"></p>
+        </div>
+    </main>
     <footer class="max-sm:absolute bottom-0 bg-grayd w-full text-white h-8 flex items-center">
         <ul class="absolute flex gap-5 right-8">
             <li class=""><a href="" class="hover:underline">Empresa</a></li>
