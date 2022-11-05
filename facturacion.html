@@ -57,47 +57,54 @@
     </style>
 </head>
 
-<body class="mt-16 mx-16 bg-transparent dark:text-white">
-    <div class="text-7xl flex items-center">
-        <ion-icon name="cash" class="ion-title text-black-100 mr-10 dark:text-white"></ion-icon>
+<body class="mt-16 mx-16 bg-transparent dark:text-white max-sm:mt-4 max-sm:mx-4">
+    <div class="text-7xl flex mt-10 items-center justify-center max-sm:block max-sm:mt-0 max-sm:text-center">
+        <ion-icon name="cash" class="ion-title mr-10 text-black-100 dark:text-white max-sm:mr-0 max-sm:text-[4rem]">
+        </ion-icon>
         <p class="text-title">Facturacion</p>
     </div>
-    <p class="my-8">Seleccione el mantenimiento que se realizo al vehiculo</p>
+    <p class="my-8 max-sm:my-2">Seleccione el mantenimiento que se realizo al vehiculo</p>
 
-    <article class="w-40 h-10 mb-8 border-red-800 border-b flex justify-center items-center text-redd-500">
+    <article class="w-40 h-10 mb-8 border-redd border-b flex justify-center items-center max-sm:mb-2">
         <p>Datos del cliente</p>
     </article>
-    <div class="grid grid-cols-4 mb-8 ">
-        <section class="border-black border mr-5 p-8 col-span-3 rounded-3xl dark:bg-darkgrayl">
+    <div class="grid grid-cols-4 max-sm:grid-cols-none mb-8 max-sm:mb-4">
+        <section
+            class="border-black border mr-5 p-8 col-span-3 rounded-3xl dark:bg-darkgrayl max-sm:mr-0 max-sm:mb-2 max-sm:p-4">
             <article>
                 <ion-icon name="person"></ion-icon>Cliente
             </article>
-            <article class="my-8">
+            <article class="my-8 max-sm:my-4">
                 <label for="documento">Documento del cliente</label><br>
-                <input type="text" id="documento" required pattern="[0-9]{8,}" class="outline-0 border-black border-b bg-transparent dark:border-white">
+                <input type="text" id="documento" required pattern="[0-9]{8,}"
+                    class="outline-0 border-black border-b bg-transparent dark:border-white">
             </article>
-            <article class="grid grid-cols-3">
+            <article class="grid grid-cols-3 max-sm:grid-cols-none">
                 <div>
                     <label for="nombre">Nombres</label><br>
-                    <input type="text" id="nombre" placeholder="Benito Khalo" class="outline-0 border-black border-b bg-transparent dark:border-white">
+                    <input type="text" id="nombre" placeholder="Benito Khalo"
+                        class="outline-0 border-black border-b bg-transparent dark:border-white">
                 </div>
                 <div>
                     <label for="telefono">Telefono</label><br>
-                    <input type="text" id="telefono" class="outline-0 border-black border-b  bg-transparent dark:border-white">
+                    <input type="text" id="telefono"
+                        class="outline-0 border-black border-b  bg-transparent dark:border-white">
                 </div>
                 <div>
                     <label for="correo">Correo</label><br>
-                    <input type="email" id="correo" class="outline-0 border-black border-b  bg-transparent dark:border-white">
+                    <input type="email" id="correo"
+                        class="outline-0 border-black border-b  bg-transparent dark:border-white">
                 </div>
             </article>
         </section>
-        <section class="border-black border p-8 bg-white rounded-3xl bg-white dark:bg-darkgrayl ">
+        <section class="border-black border p-8 rounded-3xl dark:bg-darkgrayl max-sm:col-span-3 max-sm:p-4">
             <p>
                 <ion-icon name="person"></ion-icon>Veliculo
             </p>
-            <div class="my-8">
+            <div class="my-8 max-sm:my-4">
                 <label for="placa">Placa</label><br>
-                <input type="text" id="placa" class="outline-0 border-black border-b  bg-transparent dark:border-white"><br>
+                <input type="text" id="placa"
+                    class="outline-0 border-black border-b  bg-transparent dark:border-white"><br>
             </div>
             <div>
                 <label for="model">Modelo</label><br>
@@ -111,19 +118,18 @@
                 class="w-40 h-10 mb-4 border-red-800 border-b flex justify-center items-center text-redd-500 col-start-1 col-end-2 ">
                 <p>Trabajos realizados</p>
             </article>
-            <a href="./op-factura.html" target="display" class="col-end-8 col-span-2">
+            <a href="./op-factura.html" target="display" class="col-end-8 col-span-2 max-sm:grid-cols-none">
                 <button
                     class="bg-red-800 text-white w-12 h-12 hover:shadow-list focus:bg-l rounded flex justify-center items-center">
                     <ion-icon name="list" class="text-white col-start-1 col-end-2"></ion-icon>
                 </button>
             </a>
-
         </article>
-        <div class="grid grid-cols-4 border-black border p-8 bg-white rounded-3xl dark:bg-darkgrayl">
+        <div class="grid grid-cols-4 border-black border p-8 bg-white rounded-3xl dark:bg-darkgrayl max-sm:p-4">
             <section class="col-span-3">
                 <table class="overflow-y-scroll">
                     <thead>
-                        <tr class="flex">
+                        <tr class="flex max-sm:flex-none">
                             <p>
                                 <ion-icon name="car"></ion-icon>Procedimientos
                             </p>
@@ -155,10 +161,10 @@
         </div>
     </div>
     <div>
-        <article class="w-40 h-10 my-8 border-red-800 border-b flex justify-center items-center text-redd-500">
+        <article class="w-40 h-10 my-8 border-redd border-b flex justify-center items-center max-sm:my-4">
             <p>Insumos gastados</p>
         </article>
-        <section class="border-black border mr-5 p-8 mb-8 bg-white rounded-3xl dark:bg-darkgrayl">
+        <section class="border-black border mr-5 p-8 mb-8 bg-white rounded-3xl dark:bg-darkgrayl max-sm:p-4 max-sm:mb-4">
             <table class="overflow-y-scroll ">
                 <thead>
                     <tr class="flex">
@@ -219,15 +225,15 @@
         </section>
     </div>
     <div>
-        <article class="w-40 h-10 border-red-800 border-b flex justify-center items-center text-redd-500">
+        <article class="w-40 h-10 border-redd border-b flex justify-center items-center">
             <p>Observaciones</p>
         </article>
         <label for="comentarios"></label><br>
-        <textarea name="comentarios" id="comentarios" cols="120" rows="6" placeholder="_______________________________________________________________________________________________________________________________________
-_______________________________________________________________________________________________________________________________________
-_____________________________________________________________________" class="bg-slate-200 dark:bg-darkgrayl"></textarea>
+        <textarea name="comentarios" id="comentarios" cols="120" rows="6"
+            placeholder="Ingrese las obsevaciones sobre el proceso hecho en el vehiculo"
+            class="bg-slate-200 dark:bg-darkgrayl"></textarea>
     </div>
-    <div class="flex justify-end m-8">
+    <div class="flex justify-end m-8 max-sm:m-0">
         <a href="./imp-factura.html" target="display">
             <button
                 class="bg-red-800 text-white w-28 h-12 rounded flex items-center justify-center hover:shadow-list focus:bg-l">
