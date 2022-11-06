@@ -65,15 +65,15 @@
     </div>
     <p class="my-8 max-sm:my-2">Seleccione el mantenimiento que se realizo al vehiculo</p>
 
-    <article class="w-40 h-10 mb-8 border-redd border-b flex justify-center items-center max-sm:mb-2">
+    <article class="w-40 h-10 mb-8 border-redd border-b flex justify-center items-center max-sm:mb-4">
         <p>Datos del cliente</p>
     </article>
     <div class="grid grid-cols-4 max-sm:grid-cols-none mb-8 max-sm:mb-4">
         <section
             class="border-black border mr-5 p-8 col-span-3 rounded-3xl dark:bg-darkgrayl max-sm:mr-0 max-sm:mb-2 max-sm:p-4">
-            <article>
+            <h2>
                 <ion-icon name="person"></ion-icon>Cliente
-            </article>
+            </h2>
             <article class="my-8 max-sm:my-4">
                 <label for="documento">Documento del cliente</label><br>
                 <input type="text" id="documento" required pattern="[0-9]{8,}"
@@ -98,9 +98,9 @@
             </article>
         </section>
         <section class="border-black border p-8 rounded-3xl dark:bg-darkgrayl max-sm:col-span-3 max-sm:p-4">
-            <p>
+            <h2>
                 <ion-icon name="person"></ion-icon>Veliculo
-            </p>
+            </h2>
             <div class="my-8 max-sm:my-4">
                 <label for="placa">Placa</label><br>
                 <input type="text" id="placa"
@@ -127,34 +127,34 @@
         </article>
         <div class="grid grid-cols-4 border-black border p-8 bg-white rounded-3xl dark:bg-darkgrayl max-sm:p-4">
             <section class="col-span-3">
-                <table class="overflow-y-scroll">
+                <table class="">
                     <thead>
-                        <tr class="flex max-sm:flex-none">
-                            <p>
+                        <tr class="flex max-sm:overflow-scroll">
+                            <h2>
                                 <ion-icon name="car"></ion-icon>Procedimientos
-                            </p>
+                            </h2>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="flex">
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">Cambio de
+                        <tr class="flex max-sm:block">
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-">Cambio de
                                 aceite
                             </td>
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-">
                             </td>
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b"></td>
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-"></td>
                         </tr>
-                        <tr class="flex">
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">
+                        <tr class="flex max-sm:block">
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-">
                             </td>
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b"></td>
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b"></td>
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-"></td>
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-"></td>
                         </tr>
-                        <tr class="flex ">
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b">
+                        <tr class="flex max-sm:block">
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-">
                             </td>
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b"></td>
-                            <td class="w-96 h-12 mr-5 flex justify-center items-center text-xl border-b"></td>
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-"></td>
+                            <td class="w-80 h-12 mr-5 flex justify-center items-center text-xl border-b max-sm:w-"></td>
                         </tr>
                 </table>
             </section>
@@ -164,62 +164,49 @@
         <article class="w-40 h-10 my-8 border-redd border-b flex justify-center items-center max-sm:my-4">
             <p>Insumos gastados</p>
         </article>
-        <section class="border-black border mr-5 p-8 mb-8 bg-white rounded-3xl dark:bg-darkgrayl max-sm:p-4 max-sm:mb-4">
-            <table class="overflow-y-scroll ">
+        <section class="border-black border mr-5 p-8 mb-8 rounded-3xl dark:bg-darkgrayl max-sm:p-4 max-sm:mb-4 max-sm:mr-0 overflow-y-scroll max-sm:overflow-x-scroll">
+            <table class="">
                 <thead>
                     <tr class="flex">
-                        <p>
+                        <h2>
                             <ion-icon name="person"></ion-icon>Gastos
-                        </p>
-                        <th class="list-select-all flex justify-center items-center mr-5 duration-500">
-                            <ion-icon name="caret-down"
-                                class="rounded-xl p-1 -m-1 duration-500 cursor-pointer hover:bg-red-300">
-                            </ion-icon>
-                        </th>
+                        </h2>
                         <th
-                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500">
+                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500 max-sm:w-20">
                             Nombre</th>
                         <th
-                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500">
+                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500 max-sm:w-20">
                             Cantidad</th>
                         <th
-                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500">
+                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500 max-sm:w-20">
                             Valor Unitario</th>
                         <th
-                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500">
+                            class="w-40 h-10 mr-5 border-red-800 border-b flex justify-center items-center text-redd-500 max-sm:w-20">
                             Total</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="flex border-b">
-                        <td class="flex justify-center items-center mr-5">
-                            <input type="checkbox" class="listcheck" onclick="checkchecks()">
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">Aceite 1L
                         </td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
-                        </td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">250000</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">10</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">25000</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">250000</td>
                     </tr>
                     <tr class="flex border-b">
-                        <td class="flex justify-center items-center mr-5">
-                            <input type="checkbox" class="listcheck" onclick="checkchecks()">
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">Aceite 1L
                         </td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
-                        </td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">250000</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">10</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">25000</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">250000</td>
                     </tr>
                     <tr class="flex border-b">
-                        <td class="flex justify-center items-center mr-5"><input type="checkbox" class="listcheck"
-                                onclick="checkchecks()"></td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">Aceite 1L
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">Aceite 1L
                         </td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">10</td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">25000</td>
-                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl">250000</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">10</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">25000</td>
+                        <td class="w-40 h-12 mr-5 rounded flex justify-center items-center text-xl max-sm:w-20">250000</td>
                     </tr>
             </table>
         </section>
@@ -229,7 +216,7 @@
             <p>Observaciones</p>
         </article>
         <label for="comentarios"></label><br>
-        <textarea name="comentarios" id="comentarios" cols="120" rows="6"
+        <textarea name="comentarios" id="comentarios" cols="46" rows="6"
             placeholder="Ingrese las obsevaciones sobre el proceso hecho en el vehiculo"
             class="bg-slate-200 dark:bg-darkgrayl"></textarea>
     </div>
